@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FocusFlow - Task Manager</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_Toolbar">
+      <item>
+       <widget class="QComboBox" name="comboDay">
+        <item><property name="text"><string>Poniedziałek</string></property></item>
+        <item><property name="text"><string>Wtorek</string></property></item>
+        <item><property name="text"><string>Środa</string></property></item>
+        <item><property name="text"><string>Czwartek</string></property></item>
+        <item><property name="text"><string>Piątek</string></property></item>
+        <item><property name="text"><string>Sobota</string></property></item>
+        <item><property name="text"><string>Niedziela</string></property></item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDeleteSelected">
+        <property name="text"><string>Usuń zaznaczone</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnClearDay">
+        <property name="text"><string>Wyczyść ten dzień</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnClearWeek">
+        <property name="text"><string>Zresetuj cały tydzień</string></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title"><string>Jutro</string></attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="leftMargin"><number>0</number></property>
+        <property name="topMargin"><number>0</number></property>
+        <property name="rightMargin"><number>0</number></property>
+        <property name="bottomMargin"><number>0</number></property>
+        <item><widget class="QListWidget" name="listDaily"/></item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title"><string>Tydzień</string></attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="leftMargin"><number>0</number></property>
+        <property name="topMargin"><number>0</number></property>
+        <property name="rightMargin"><number>0</number></property>
+        <property name="bottomMargin"><number>0</number></property>
+        <item><widget class="QListWidget" name="listWeekly"/></item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLineEdit" name="inputTask">
+        <property name="placeholderText"><string>Wpisz nowe zadanie...</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnAdd">
+        <property name="text"><string>Dodaj zadanie</string></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="layoutProgressDaily">
+      <item>
+       <widget class="QLabel" name="lblProgressDaily">
+        <property name="minimumSize"><size><width>140</width><height>0</height></size></property>
+        <property name="text"><string>Jutro: 0% (0/0)</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="progressDaily">
+        <property name="value"><number>0</number></property>
+        <property name="textVisible"><bool>false</bool></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="layoutProgressWeekly">
+      <item>
+       <widget class="QLabel" name="lblProgressWeekly">
+        <property name="minimumSize"><size><width>140</width><height>0</height></size></property>
+        <property name="text"><string>Tydzień: 0% (0/0)</string></property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="progressWeekly">
+        <property name="value"><number>0</number></property>
+        <property name="textVisible"><bool>false</bool></property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
